@@ -8,6 +8,8 @@ class Knapsack {
             return 0;
         }
         
+        if(dp[n][C] != -1) return dp[n][C];
+        
         if(wt[n - 1] > C) {
             dp[n][C] = solve(wt, val, C, n - 1, dp);
             return dp[n][C];
